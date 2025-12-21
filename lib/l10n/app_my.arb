@@ -1,0 +1,43 @@
+{
+  "@@locale": "my",
+  "appTitle": "ဘလောက် စတာတာ",
+  "@appTitle": {
+    "description": "The application title"
+  },
+  "counterTitle": "ရေတွက်စက်",
+  "@counterTitle": {
+    "description": "Title for counter page"
+  },
+  "increment": "တိုးမည်",
+  "@increment": {
+    "description": "Increment button label"
+  },
+  "decrement": "လျှော့မည်",
+  "@decrement": {
+    "description": "Decrement button label"
+  },
+  "reset": "ပြန်လည်စတင်မည်",
+  "@reset": {
+    "description": "Reset button label"
+  },
+  "currentValue": "လက်ရှိတန်ဖိုး",
+  "@currentValue": {
+    "description": "Label for current counter value"
+  },
+  "lightTheme": "အလင်းပုံစံ",
+  "@lightTheme": {
+    "description": "Light theme option"
+  },
+  "darkTheme": "အမှောင်ပုံစံ",
+  "@darkTheme": {
+    "description": "Dark theme option"
+  },
+  "systemTheme": "စနစ်ပုံစံ",
+  "@systemTheme": {
+    "description": "System theme option"
+  },
+  "hello": "မင်္ဂလာပါ",
+  "@hello": {
+    "description": "A simple greeting"
+  }
+}

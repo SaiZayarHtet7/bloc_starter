@@ -1,0 +1,43 @@
+{
+  "@@locale": "en",
+  "appTitle": "Bloc Starter",
+  "@appTitle": {
+    "description": "The application title"
+  },
+  "counterTitle": "Counter",
+  "@counterTitle": {
+    "description": "Title for counter page"
+  },
+  "increment": "Increment",
+  "@increment": {
+    "description": "Increment button label"
+  },
+  "decrement": "Decrement",
+  "@decrement": {
+    "description": "Decrement button label"
+  },
+  "reset": "Reset",
+  "@reset": {
+    "description": "Reset button label"
+  },
+  "currentValue": "Current value",
+  "@currentValue": {
+    "description": "Label for current counter value"
+  },
+  "lightTheme": "Light Theme",
+  "@lightTheme": {
+    "description": "Light theme option"
+  },
+  "darkTheme": "Dark Theme",
+  "@darkTheme": {
+    "description": "Dark theme option"
+  },
+  "systemTheme": "System Theme",
+  "@systemTheme": {
+    "description": "System theme option"
+  },
+  "hello": "Hello",
+    "@hello": {
+        "description": "A simple greeting"
+    }
+}
