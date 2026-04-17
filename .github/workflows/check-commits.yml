@@ -1,0 +1,21 @@
+name: Require at least 2 commits
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  check-commit-count:
+    name: Check PR has at least 2 commits
+    runs-on: ubuntu-latest
+    steps:
+      - name: Count commits in PR
+        env:
+          COMMIT_COUNT: ${{ github.event.pull_request.commits }}
+        run: |
+          echo "Number of commits in this PR: $COMMIT_COUNT"
+          if [ "$COMMIT_COUNT" -lt 2 ]; then
+            echo "❌ This PR must have at least 2 commits before it can be merged. Currently has $COMMIT_COUNT commit(s)."
+            exit 1
+          fi
+          echo "✅ PR has $COMMIT_COUNT commits. Minimum requirement of 2 met."
