@@ -83,7 +83,7 @@ class PostsView extends StatelessWidget {
                   return PostCard(
                     post: post,
                     onTap: () {
-                      _showPostDetails(context, post);
+                      context.go('/posts/${post.id}');
                     },
                   );
                 },
@@ -100,78 +100,6 @@ class PostsView extends StatelessWidget {
         },
         icon: const Icon(Icons.refresh),
         label: const Text('Refresh'),
-      ),
-    );
-  }
-
-  void _showPostDetails(BuildContext context, post) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      builder: (context) => DraggableScrollableSheet(
-        initialChildSize: 0.7,
-        minChildSize: 0.5,
-        maxChildSize: 0.95,
-        expand: false,
-        builder: (context, scrollController) {
-          return Container(
-            padding: const EdgeInsets.all(24),
-            child: ListView(
-              controller: scrollController,
-              children: [
-                Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: Theme.of(context).colorScheme.primary,
-                      child: Text(
-                        '${post.userId}',
-                        style: TextStyle(
-                          color: Theme.of(context).colorScheme.onPrimary,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Text(
-                        'User ${post.userId}',
-                        style: Theme.of(context).textTheme.titleMedium,
-                      ),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.close),
-                      onPressed: () => Navigator.pop(context),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 24),
-                Text(
-                  post.title,
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(height: 16),
-                Text(post.body, style: Theme.of(context).textTheme.bodyLarge),
-                const SizedBox(height: 24),
-                const Divider(),
-                const SizedBox(height: 16),
-                Row(
-                  children: [
-                    Chip(
-                      label: Text('Post #${post.id}'),
-                      avatar: const Icon(Icons.article, size: 16),
-                    ),
-                    const SizedBox(width: 8),
-                    Chip(
-                      label: Text('User #${post.userId}'),
-                      avatar: const Icon(Icons.person, size: 16),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          );
-        },
       ),
     );
   }
